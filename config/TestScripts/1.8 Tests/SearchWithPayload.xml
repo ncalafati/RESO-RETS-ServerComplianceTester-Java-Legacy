@@ -6,7 +6,7 @@
     <TransactionLabel>Search With Payload</TransactionLabel>
     <SearchType>${Search.SearchType}</SearchType>
     <SearchClass>${Search.Class}</SearchClass>
-    <Query>${Search.QueryStandard}</Query>
+    <Query>${Search.QuerySystem}</Query>
     <QueryType>DMQL2</QueryType>
     <Count>1</Count>
     <Payload>${Search.Payload}</Payload>
