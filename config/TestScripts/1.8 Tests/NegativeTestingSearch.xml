@@ -11,7 +11,7 @@
     <Count>1</Count>
     <Format>STANDARD-XML</Format>
     <Limit>1</Limit>
-    <StandardNames>1</StandardNames>
+    <StandardNames>0</StandardNames>
     <TestEvaluators>
 	<JavaClassName>com.realtor.rets.compliance.tests.UnknownQueryField</JavaClassName>
     </TestEvaluators>
@@ -35,12 +35,12 @@
           <TransactionLabel>Invalid Query Syntax</TransactionLabel>
           <SearchType>${Search.SearchType}</SearchType>
           <SearchClass>${Search.Class}</SearchClass>
-          <Query>${Search.QueryStandard}>${Search.QueryStandard}||</Query>
+          <Query>${Search.QuerySystem}>${Search.QuerySystem}||</Query>
           <QueryType>DMQL2</QueryType>
           <Count>1</Count>
           <Format>STANDARD-XML</Format>
           <Limit>1</Limit>
-          <StandardNames>1</StandardNames>
+          <StandardNames>0</StandardNames>
           <TestEvaluators>
               <JavaClassName>com.realtor.rets.compliance.tests.InvalidQuerySyntax</JavaClassName>
           </TestEvaluators>
@@ -49,12 +49,12 @@
 	<TransactionLabel>Requested DTD Unavailable</TransactionLabel>
 	<SearchType>${Search.SearchType}</SearchType>
 	<SearchClass>${Search.Class}</SearchClass>
-	<Query>${Search.QueryStandard}</Query>
+	<Query>${Search.QuerySystem}</Query>
 	<QueryType>DMQL2</QueryType>
 	<Count>1</Count>
 	<Format>STANDARD-XML:RETS-20060101.dtd</Format>
 	<Limit>1</Limit>
-	<StandardNames>1</StandardNames>
+	<StandardNames>0</StandardNames>
 	<TestEvaluators>
 	    <JavaClassName>com.realtor.rets.compliance.tests.RequestedDTDUnavailable</JavaClassName>
 	</TestEvaluators>
