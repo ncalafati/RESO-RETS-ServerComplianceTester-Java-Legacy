@@ -20,7 +20,7 @@
       <TransactionLabel>Unknown Field In Select</TransactionLabel>
       <SearchType>${Search.SearchType}</SearchType>
       <SearchClass>${Search.Class}</SearchClass>
-      <Query>${Search.QuerySystem}</Query>
+      <Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
       <QueryType>DMQL2</QueryType>
       <Select>RETSNegativeTestingField</Select>
       <Count>1</Count>
@@ -35,7 +35,7 @@
           <TransactionLabel>Invalid Query Syntax</TransactionLabel>
           <SearchType>${Search.SearchType}</SearchType>
           <SearchClass>${Search.Class}</SearchClass>
-          <Query>${Search.QuerySystem}>${Search.QuerySystem}||</Query>
+          <Query>${Search.System.RequiredFields}${Search.QuerySystem}>${Search.QuerySystem}||</Query>
           <QueryType>DMQL2</QueryType>
           <Count>1</Count>
           <Format>COMPACT</Format>
@@ -49,7 +49,7 @@
 	<TransactionLabel>Requested DTD Unavailable</TransactionLabel>
 	<SearchType>${Search.SearchType}</SearchType>
 	<SearchClass>${Search.Class}</SearchClass>
-	<Query>${Search.QuerySystem}</Query>
+	<Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
 	<QueryType>DMQL2</QueryType>
 	<Count>1</Count>
 	<Format>STANDARD-XML:RETS-20060101.dtd</Format>
@@ -63,7 +63,7 @@
 	<TransactionLabel>Invalid Payload</TransactionLabel>
 	<SearchType>${Search.SearchType}</SearchType>
 	<SearchClass>${Search.Class}</SearchClass>
-	<Query>${Search.QuerySystem}</Query>
+	<Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
 	<QueryType>DMQL2</QueryType>
 	<Count>1</Count>
 	<Payload>INVALIDPAYLOAD</Payload>
@@ -77,7 +77,7 @@
 	<TransactionLabel>Payload and Format Invalid Combination</TransactionLabel>
 	<SearchType>${Search.SearchType}</SearchType>
 	<SearchClass>${Search.Class}</SearchClass>
-	<Query>${Search.QuerySystem}</Query>
+	<Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
 	<QueryType>DMQL2</QueryType>
 	<Count>1</Count>
 	<Format>COMPACT</Format>
@@ -92,7 +92,7 @@
 	<TransactionLabel>Payload and Select Invalid Combination</TransactionLabel>
 	<SearchType>${Search.SearchType}</SearchType>
 	<SearchClass>${Search.Class}</SearchClass>
-	<Query>${Search.QuerySystem}</Query>
+	<Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
 	<QueryType>DMQL2</QueryType>
 	<Count>1</Count>
 	<Select>${Search.SelectSystem}</Select>
