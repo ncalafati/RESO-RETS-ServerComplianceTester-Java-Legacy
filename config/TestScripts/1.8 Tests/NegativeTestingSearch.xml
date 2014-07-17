@@ -9,7 +9,7 @@
     <Query>(RETSNegativeTestingField=Cleveland)</Query>
     <QueryType>DMQL2</QueryType>
     <Count>1</Count>
-    <Format>STANDARD-XML</Format>
+    <Format>COMPACT</Format>
     <Limit>1</Limit>
     <StandardNames>0</StandardNames>
     <TestEvaluators>
@@ -38,7 +38,7 @@
           <Query>${Search.QuerySystem}>${Search.QuerySystem}||</Query>
           <QueryType>DMQL2</QueryType>
           <Count>1</Count>
-          <Format>STANDARD-XML</Format>
+          <Format>COMPACT</Format>
           <Limit>1</Limit>
           <StandardNames>0</StandardNames>
           <TestEvaluators>
