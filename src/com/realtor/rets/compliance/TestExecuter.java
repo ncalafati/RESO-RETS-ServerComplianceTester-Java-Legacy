@@ -182,7 +182,7 @@ public class TestExecuter {
                                       String transLogDir, String uaPassword) {
         RETSConnection conn = new RETSConnection();
         conn.setTransactionLogDirectory("/tmp");
-
+        System.out.println("setting login action uaPassword is |"+uaPassword+"|");
         if ((retsVer == null) || (retsVer.trim().length() == 0)) {
             try {
                 Properties clientProps = PropertyManager.getClientPropertyManager().getProperties();
@@ -211,8 +211,9 @@ public class TestExecuter {
             conn.setUserAgent(userAgent);
         }
 
-		if (uaPassword != null) {
+		if (uaPassword != null&&uaPassword.trim().length()>0) {
             conn.setUAPassword(uaPassword);
+
             conn.setUAHeader(null);
         }
 
