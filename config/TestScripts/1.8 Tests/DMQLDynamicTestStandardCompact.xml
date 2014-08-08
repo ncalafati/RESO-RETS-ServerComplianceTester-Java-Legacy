@@ -146,7 +146,7 @@
         <TransactionLabel>DMQL Date Search - before NOW</TransactionLabel>
         <SearchType>${DMQL.Search.SearchType}</SearchType>
         <SearchClass>${DMQL.SearchClass.Standard}</SearchClass>
-        <Query>${Search.Standard.RequiredFields}(${DMQL.Standard.DateTime.NOW.Field}=NOW-)</Query>
+        <Query>${Search.Standard.RequiredFields}(${DMQL.Standard.DateTime.Now.Field}=NOW-)</Query>
         <QueryType>DMQL2</QueryType>
         <Count>1</Count>
         <Format>COMPACT-DECODED</Format>
