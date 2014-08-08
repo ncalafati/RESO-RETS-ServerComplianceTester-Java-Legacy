@@ -60,7 +60,7 @@ public class DMQLConfigurator extends JDialog {
 	static {
 		// initialize the valueTypeToDataTypeMap
 		valueTypeToDataTypeMap.put("Character", new String [] { "Contains", "StartsWith", "AndOr" });
-		valueTypeToDataTypeMap.put("DateTime", new String [] { "Minimum", "Maximum", "Today" });
+		valueTypeToDataTypeMap.put("DateTime", new String [] { "Minimum", "Maximum", "Today","Now" });
 		valueTypeToDataTypeMap.put("Decimal", new String [] { "Minimum", "Maximum", "RangeLow", "RangeHigh" });
 
     	// initialize the neededSet
