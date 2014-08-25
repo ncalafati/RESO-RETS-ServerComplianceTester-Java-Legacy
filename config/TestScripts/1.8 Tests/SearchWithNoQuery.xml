@@ -20,7 +20,8 @@
       <SearchClass>${Search.Class}</SearchClass>
       <Select>${Search.SelectSystem}</Select>
       <Count>1</Count>
-      <Format>COMPACT</Format>
+       <QueryType>DMQL2</QueryType>
+       <Format>COMPACT</Format>
       <Limit>2</Limit>
       <Offset>1</Offset>
       <StandardNames>0</StandardNames>
