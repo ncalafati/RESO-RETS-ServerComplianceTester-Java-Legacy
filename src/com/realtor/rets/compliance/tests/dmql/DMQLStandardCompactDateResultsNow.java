@@ -51,7 +51,7 @@ public class DMQLStandardCompactDateResultsNow extends DMQLResultsSystem {
     protected void compareDMQLResults(String transName, String responseBody, 
    		CompactFormatData compactFormatData) {
    	
-   		String fieldName = getDMQLProperty("DMQL.Standard",DMQL_DATE_NOW_FIELD);
+   		String fieldName = getDMQLProperty("DMQL.Standard.",DMQL_DATE_NOW_FIELD);
     
    		testResultDesc = "Compare value of requested field " + fieldName +
 			" to the specified today's Date; date field Value must be THE SAME AS the value "
