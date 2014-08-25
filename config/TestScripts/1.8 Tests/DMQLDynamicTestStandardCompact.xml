@@ -153,7 +153,7 @@
         <Limit>2</Limit>
         <StandardNames>1</StandardNames>
         <TestEvaluators>
-            <JavaClassName>com.realtor.rets.compliance.tests.dmql.DMQLStandardCompactDateResultsToday</JavaClassName>
+            <JavaClassName>com.realtor.rets.compliance.tests.dmql.DMQLStandardCompactDateResultsNow</JavaClassName>
         </TestEvaluators>
     </SearchTransaction>
     <TestEvaluators>
