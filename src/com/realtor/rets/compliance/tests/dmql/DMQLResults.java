@@ -99,8 +99,10 @@ public abstract class DMQLResults extends BaseEvaluator {
     	if (testParams == null) {
     		initializeTestParams();
     	}
+
         String propertyValue = testParams.getProperty(prefix + keyBase);
         if (log.isDebugEnabled()) {
+            log.debug("prefix is: "+prefix+" keyBase is "+keyBase);
             log.debug("Returned Property Value for " + keyBase + ": " + propertyValue);
         }
         return propertyValue;
