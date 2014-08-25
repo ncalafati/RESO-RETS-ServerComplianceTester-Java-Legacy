@@ -42,6 +42,7 @@ public abstract class DMQLResults extends BaseEvaluator {
     protected static final String DMQL_DATE_MINIMUM_FIELD = "DateTime.Minimum.Field";
     protected static final String DMQL_DATE_MINIMUM_VALUE = "DateTime.Minimum.Value";
     protected static final String DMQL_DATE_TODAY_FIELD = "DateTime.Today.Field";
+    protected static final String DMQL_DATE_NOW_FIELD = "DateTime.Now.Field";
     
     private static Properties testParams = null;
     
