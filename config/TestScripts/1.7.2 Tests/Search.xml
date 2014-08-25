@@ -10,12 +10,12 @@
     <Query>${Search.Standard.RequiredFields}${Search.QueryStandard}</Query>
     <QueryType>DMQL2</QueryType>
     <Count>1</Count>
-    <Format>STANDARD-XML</Format>
+    <Format>COMPACT</Format>
     <Limit>2</Limit>
     <RestrictedIndicator>###</RestrictedIndicator>
     <StandardNames>1</StandardNames>
     <TestEvaluators>
-	<JavaClassName>com.realtor.rets.compliance.tests.ValidateSearch172DTD</JavaClassName>
+	<JavaClassName>com.realtor.rets.compliance.tests.ValidateCompactSearch172</JavaClassName>
     </TestEvaluators>
   </SearchTransaction>
   
