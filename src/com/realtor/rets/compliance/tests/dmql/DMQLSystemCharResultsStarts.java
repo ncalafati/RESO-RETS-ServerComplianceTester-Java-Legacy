@@ -42,7 +42,7 @@ public class DMQLSystemCharResultsStarts extends DMQLResultsSystem {
 	        
 	        while (iterator.hasNext()) {
 	        	String testValue = (String) iterator.next();
-	        	if (! testValue.startsWith(fieldValue)) {
+	        	if (! testValue.toLowerCase().startsWith(fieldValue.toLowerCase())) {
 	        		testFailResult = testValue;
 	        		break;
 	        	}
