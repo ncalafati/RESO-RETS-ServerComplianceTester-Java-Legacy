@@ -2,7 +2,7 @@ package com.realtor.rets.compliance.tests;
 
 
 /**
- * Extends the ValidateDTD and validates against the 1.8 RETS DTD
+ * Extends the ValidateDTD and validates against the 1.7.2 RETS DTD
  * @author pobrien
  */
 public class ValidateSearch172DTD extends ValidateDTD {
