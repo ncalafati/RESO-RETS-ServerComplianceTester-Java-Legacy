@@ -38,7 +38,7 @@ public class DMQLStandardCompactDateResultsMin extends DMQLResultsSystem {
         Date thresholdDate = null;
 
         try {
-            thresholdDate = DATE_FORMAT.parse(getDMQLProperty("DMQL.Standard",DMQL_DATE_MINIMUM_VALUE));
+            thresholdDate = DATE_FORMAT.parse(getDMQLProperty("DMQL.Standard.",DMQL_DATE_MINIMUM_VALUE));
         } catch (Exception e) {
             testResultStatus = "INFO";
             testResultNotes = "ERROR: Error in query Could Not Initialize Comparison Date Value: "
