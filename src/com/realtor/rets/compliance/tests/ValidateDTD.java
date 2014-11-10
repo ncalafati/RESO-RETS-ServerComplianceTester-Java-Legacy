@@ -130,6 +130,7 @@ private String errorList="";
             Pattern patDocType = Pattern.compile("<\\!DOCTYPE[ \\t]+RETS[ \\t]+SYSTEM[ \\t]+\"(.*)\"[ \\t]*>");
             Matcher matchDocType = patDocType.matcher(responseBody);
 
+
             if (matchDocType.find()){
 
                 if (!matchDocType.group(1).endsWith(docTypeLocation) ){
@@ -142,10 +143,12 @@ private String errorList="";
                         "Incorrect dtd, expected "+docTypeLocation+" got "+matchDocType.group(1));
                 }
             }else{
-                appendNotes("Failure:  unexpected doctype");
-                return reportResult("ValidateDTD:  "+transactionName,
-                "Checks to see if the transaction validated against the RETS DTD",
-                status, notes,jException,"unexpected doctype, expected <!DOCTYPE RETS SYSTEM \""+docTypeLocation+"\">");
+                if (responseBody.indexOf("PUBLIC")<0){
+                    appendNotes("Failure:  unexpected doctype");
+                    return reportResult("ValidateDTD:  "+transactionName,
+                    "Checks to see if the transaction validated against the RETS DTD",
+                    status, notes,jException,"unexpected doctype, expected <!DOCTYPE RETS SYSTEM \""+docTypeLocation+"\">");
+                }
             }
         }
 
