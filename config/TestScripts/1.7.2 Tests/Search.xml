@@ -6,14 +6,14 @@
  <SearchTransaction>
     <TransactionLabel>Search</TransactionLabel>
     <SearchType>${Search.SearchType}</SearchType>
-    <SearchClass>${Search.Class.Standard}</SearchClass>
-    <Query>${Search.Standard.RequiredFields}${Search.QueryStandard}</Query>
+    <SearchClass>${Search.Class}</SearchClass>
+    <Query>${Search.System.RequiredFields}${Search.QuerySystem}</Query>
     <QueryType>DMQL2</QueryType>
     <Count>1</Count>
     <Format>COMPACT</Format>
     <Limit>2</Limit>
     <RestrictedIndicator>###</RestrictedIndicator>
-    <StandardNames>1</StandardNames>
+    <StandardNames>0</StandardNames>
     <TestEvaluators>
 	<JavaClassName>com.realtor.rets.compliance.tests.ValidateCompactSearch172</JavaClassName>
     </TestEvaluators>
@@ -22,7 +22,7 @@
 <SearchTransaction>
     <TransactionLabel>Search Standard Names</TransactionLabel>
     <SearchType>${Search.SearchType}</SearchType>
-    <SearchClass>${Search.Class}</SearchClass>
+    <SearchClass>${Search.Class.Standard}</SearchClass>
     <Query>${Search.Standard.RequiredFields}${Search.QueryStandard}</Query>
     <QueryType>DMQL2</QueryType>
     <Count>1</Count>
