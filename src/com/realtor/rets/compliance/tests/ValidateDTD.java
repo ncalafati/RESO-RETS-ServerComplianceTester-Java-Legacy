@@ -4,24 +4,22 @@
  */
 package com.realtor.rets.compliance.tests;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
+import com.realtor.rets.compliance.PropertyManager;
+import com.realtor.rets.compliance.TestResult;
+import com.realtor.rets.compliance.tests.util.CollectionUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.realtor.rets.retsapi.RETSTransaction;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 
-import com.realtor.rets.compliance.TestResult;
-import com.realtor.rets.compliance.PropertyManager;
-import com.realtor.rets.compliance.tests.util.CollectionUtils;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Extends the BaseEvaluator Interface to validate against a DTD
@@ -45,9 +43,7 @@ private String errorList="";
    * Evaluate a set of transactions. This method is called by the TestExecuter
    * Checks the XML response against the RETS DTD
    *
-   * @param trans Hash containing all transactions defined in a test script
-   * @param testReport Report to which to add individual testResult objects.
-   *
+   *  *
    * @return just returns an empty string for now.
    */
   protected TestResult processResults(String transName, RETSTransaction t) {
