@@ -84,10 +84,10 @@ protected TestResult processResults(String transName,RETSTransaction t) {
 
   private String getBoundary(String contentString){
   		  int boundIdx = contentString.indexOf("boundary");
-  		  String boundary = contentString.substring(boundIdx);
-  		  int endIdx = boundary.indexOf(";");
+          String boundary = contentString.substring(boundIdx);
+  		  int endIdx = boundary.lastIndexOf('"');
   		  int begIdx = boundary.indexOf("=")+1;
-  		  boundary="--"+boundary.substring(begIdx,endIdx)+"--";
+  		  boundary="--"+boundary.substring(begIdx,endIdx);
 		  return boundary;
   }
 
