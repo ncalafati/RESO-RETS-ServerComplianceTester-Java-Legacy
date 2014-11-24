@@ -470,13 +470,14 @@ public class TestExecuter {
     }
 
     private void executeTests(HashMap<String, RETSTransaction> transMap, List<String> testList, TestReport testReport) {
-
+        String name="";
         // here we get the evaluators
         try {
             Iterator<String> itr = testList.iterator();
 
             while (itr.hasNext()) {
-                String name = itr.next();
+                name="<unknown>";
+                name = itr.next();
                 System.out.println("inside executeTests test name is " + name);
                 // get new instance of a test evaluator using reflection
                 TestEvaluator te = (TestEvaluator) Class.forName(name).newInstance();
@@ -488,7 +489,7 @@ public class TestExecuter {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            testReport.addTestResult(reportException(e, "Exception thrown"));
+            testReport.addTestResult(reportException(e, "Exception thrown in test "+name));
         }
     }
 
@@ -520,16 +521,16 @@ public class TestExecuter {
             return false;
         }
 
-        if (trans.getResponseStatus() != null)
+        if (trans.getResponseStatus() != null){
 
-            if (!trans.getResponseStatus().equalsIgnoreCase("0")) {
+//            if (!trans.getResponseStatus().equalsIgnoreCase("0"))
                 TestResult testResult = new TestResult("Response Status " +
                         trans.getResponseStatus(),
                         "Transaction " + trans.getClass().getName() +
                         " return a response Status of " +
                         trans.getResponseStatus());
                 testResult.setJavaException("");
-                testResult.setStatus("Info");
+                testResult.setStatus("RETS");
                 testResult.setRetsReplyCode(trans.getResponseStatus());
 
                 StringBuffer sb = new StringBuffer();
@@ -544,6 +545,8 @@ public class TestExecuter {
                         sb.append("\n\t" + key + "=" + (String) rMap.get(key));
                     }
                 }
+                sb.append("\n\nTransaction Result:\n");
+                sb.append(trans.getResponse());
                 testResult.setNotes(sb.toString());
                 testReport.addTestResult(testResult);
             }
@@ -737,12 +740,13 @@ public class TestExecuter {
      * @return test Result object
      */
     public static TestResult reportTransactionException(Exception e, RETSTransaction trans) {
-        TestResult testResult = new TestResult("Exception Thrown", e.toString());
+        String transName=trans.getClass().getName();
+        TestResult testResult = new TestResult("Exception in "+transName, e.toString());
         testResult.setJavaException(e.toString());
         testResult.setStatus("Exception");
 
         StringBuffer sb = new StringBuffer();
-        sb.append("Transaction Name : " + trans.getClass().getName());
+        sb.append("Transaction Name : " + transName);
         sb.append("\nRequest Type : " + trans.getRequestType());
         sb.append("\nTransaction arguments : \n");
         Map rMap = trans.getRequestMap();
