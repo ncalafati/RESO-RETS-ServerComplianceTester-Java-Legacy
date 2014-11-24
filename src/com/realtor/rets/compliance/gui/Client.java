@@ -29,6 +29,7 @@ public class Client extends JFrame
     private JButton buttonLogDirectory;
     private JButton buttonResultsDirectory;
     private JButton buttonSelectTest;
+    private JButton buttonRunTest;
     private JButton configureButton;
     private JButton dmqlButton;
     private JButton downloadButton;
@@ -42,6 +43,7 @@ public class Client extends JFrame
     private JTextField textUsername;
     private JComboBox retsVersion;
     private String versionString;
+    private File selectedTests[];
     private static final String [] RETS_VERSIONS = {"1.8","1.7.2"};
     //private static final String [] RETS_VERSIONS = {"1.0", "1.5", "1.7","1.8"};
     private static final String DEFAULT_RETS_VERSION = "1.8";
@@ -80,6 +82,7 @@ public class Client extends JFrame
         textUserAgent = new JTextField();
         textUserAgentPassword = new JTextField();
         buttonSelectTest = new JButton();
+        buttonRunTest = new JButton();
         textLogDir = new JTextField();
         buttonLogDirectory = new JButton();
         textResultsDir = new JTextField();
@@ -204,7 +207,7 @@ public class Client extends JFrame
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridwidth = GridBagConstraints.REMAINDER;
 
-        buttonSelectTest.setText("Run Selected Scripts");
+        buttonSelectTest.setText("Select and Run Scripts");
         buttonSelectTest.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 buttonSelectTestActionPerformed(evt);
@@ -212,6 +215,15 @@ public class Client extends JFrame
         });
 
         buttonPanel.add(buttonSelectTest, gbc);
+
+        buttonRunTest.setText("Rerun Selected Scripts");
+        buttonRunTest.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                buttonRunTestActionPerformed(evt);
+            }
+        });
+
+        buttonPanel.add(buttonRunTest, gbc);
 
         configureButton.setText("Configure...");
         configureButton.setActionCommand("ConfigureButton");
@@ -323,6 +335,7 @@ public class Client extends JFrame
         buttonLogDirectory.setEnabled(enabled);
         buttonResultsDirectory.setEnabled(enabled);
         buttonSelectTest.setEnabled(enabled);
+        buttonRunTest.setEnabled(enabled);
         configureButton.setEnabled(enabled);
         downloadButton.setEnabled(enabled);
         dmqlButton.setEnabled(enabled);
@@ -436,7 +449,21 @@ public class Client extends JFrame
         chooser.setDialogTitle("Select one or more test scripts");
         int returnVal = chooser.showOpenDialog(this);
         if ((returnVal == JFileChooser.APPROVE_OPTION) && (chooser.getSelectedFiles() != null)) {
-            File files [] = chooser.getSelectedFiles();
+            selectedTests = chooser.getSelectedFiles();
+            runTests(selectedTests);
+        }
+
+    }
+
+    private void buttonRunTestActionPerformed(ActionEvent evt) {
+        if (selectedTests==null||selectedTests.length==0){
+            jTextArea1.setText("No tests are selected");
+        } else {
+            runTests(selectedTests);
+        }
+    }
+
+    private void runTests(File files[]){
             StringBuffer sb = new StringBuffer();
             saveTestClientProperties();
             ReportForm rf = new ReportForm(files, textUsername.getText(),
@@ -451,8 +478,6 @@ public class Client extends JFrame
                 sb.append("\n\tExecuting Test : "+files[i].getAbsolutePath());
             }
             jTextArea1.setText(sb.toString());
-        }
-
     }
 
     private void loadProperties()

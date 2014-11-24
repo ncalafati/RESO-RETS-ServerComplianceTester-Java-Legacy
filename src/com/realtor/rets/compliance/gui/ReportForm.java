@@ -324,12 +324,12 @@ public class ReportForm extends JFrame implements Runnable {
         }
         jTable1.setModel(tableModel);
         TableColumn tc1 = jTable1.getColumn("Test Name");
-        tc1.setMaxWidth(180);
-        tc1.setMinWidth(180);
-        tc1.setWidth(180);
+        tc1.setMaxWidth(380);
+        tc1.setMinWidth(80);
+        tc1.setWidth(380);
         TableColumn tc2 = jTable1.getColumn("Status");
-        tc2.setMinWidth(79);
-        tc2.setMaxWidth(80);
+        tc2.setMinWidth(10);
+        tc2.setMaxWidth(400);
 
     }
     
