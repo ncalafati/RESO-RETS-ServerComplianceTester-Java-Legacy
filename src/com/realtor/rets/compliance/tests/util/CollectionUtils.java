@@ -22,6 +22,9 @@ public class CollectionUtils {
      */
 
     public static Map<String, Object> copyLowerCaseMap(Map<?, ?> map) {
+        if (map==null){
+            return null;
+        }
         HashMap<String, Object> keyMap = new HashMap<String, Object>();
         Iterator<?> keys = map.keySet().iterator();
         while (keys.hasNext()) {
@@ -36,8 +39,13 @@ public class CollectionUtils {
     }
 
     public static boolean hasValue(Map<?, ?> map, String key, String val) {
-
+        if (map==null){
+            return false;
+        }
         Collection<?> col = (Collection<?>) map.get(key);
+        if (col==null){
+            return false;
+        }
         Iterator<?> itr = col.iterator();
         while (itr.hasNext()) {
             String str = (String) itr.next();
@@ -52,7 +60,13 @@ public class CollectionUtils {
     }
 
     public static int keyCount(Map<?, ?> map, String key) {
+        if (map==null){
+            return 0;
+        }
         Collection<?> col = (Collection<?>) map.get(key);
+        if (col==null){
+            return 0;
+        }
         return col.size();
 
     }
