@@ -50,6 +50,7 @@
           <JavaClassName>com.realtor.rets.compliance.tests.ValidateCompactSearch18</JavaClassName>
           <JavaClassName>com.realtor.rets.compliance.tests.CheckSearchResults</JavaClassName>
           <JavaClassName>com.realtor.rets.compliance.tests.CheckCountNone</JavaClassName>
+          <JavaClassName>com.realtor.rets.compliance.tests.dmql.ConfirmSearchResults</JavaClassName>
       </TestEvaluators>
     </SearchTransaction>
     <SearchTransaction>
@@ -68,6 +69,7 @@
               <JavaClassName>com.realtor.rets.compliance.tests.ValidateCompactSearch18</JavaClassName>
               <JavaClassName>com.realtor.rets.compliance.tests.CheckSearchResults</JavaClassName>
               <JavaClassName>com.realtor.rets.compliance.tests.CheckCount</JavaClassName>
+              <JavaClassName>com.realtor.rets.compliance.tests.dmql.ConfirmSearchResults</JavaClassName>
           </TestEvaluators>
     </SearchTransaction>
     <SearchTransaction>
