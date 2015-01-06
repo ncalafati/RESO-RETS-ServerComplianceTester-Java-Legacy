@@ -117,6 +117,18 @@ public abstract class NegativeBaseEvaluator extends BaseEvaluator {
         + correctResponseStatus;
 } 
 
+ protected void setWarningResponse(String responseBody, String transName,
+            String actualResponseStatus) {
+        testResultStatus = "SUCCESS";
+        testResultNotes = "The Negative Test " + transName
+        + " Succeeded with a WARNING!  It expected a Transaction StatusResponse of " + correctResponseStatus
+        + " but The server returned the a StatusResponse of  " + actualResponseStatus
+        + "which may still be acceptable.   SEE Response Body: "+ '\n' + responseBody;
+
+        testResultDesc = "Compare returned status value of transaction " + transName +
+        ", " + actualResponseStatus + " to the correct Response status value for this transacion "
+        + correctResponseStatus;
+}
     
     public String getCorrectResponseStatus() {
         return correctResponseStatus;

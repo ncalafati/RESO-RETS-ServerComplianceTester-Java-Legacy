@@ -42,7 +42,11 @@ public class InvalidType extends NegativeBaseEvaluator {
         }
 
         if (!transRespStatus.equals(msf_EXPECTED_STATUS_RESPONSE_CODE)) {
+         if (transRespStatus.equals("20501")||transRespStatus.equals("20502")||transRespStatus.equals("20503")||transRespStatus.equals("20508")||transRespStatus.equals("20509")||transRespStatus.equals("20513")||transRespStatus.equals("20512")) {
+                setWarningResponse(responseBody, transName, transRespStatus);
+            } else{
             setFailureResponse(responseBody, transName, transRespStatus);
+            }
         } else {
             setSuccessResponse(responseBody, transName, transRespStatus);
         }
