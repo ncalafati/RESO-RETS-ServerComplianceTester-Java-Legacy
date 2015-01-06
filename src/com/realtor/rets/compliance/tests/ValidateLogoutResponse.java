@@ -105,10 +105,14 @@ private String errorList="";
 
     try {
       if ((responseBody != null) && (responseBody.length() > 0)) {
-
-
+        int pos = responseBody.indexOf("<?");
+        if (pos>0){
+            int endPos=(pos+20);
+            responseBody="<?xml version=\"1.0\"?>"+"\r\n<!DOCTYPE RETS SYSTEM \""+docTypeLocation+"\">\r\n"+responseBody.substring(endPos);
+                    
+        } else {
 		responseBody="<?xml version=\"1.0\"?>"+"\r\n<!DOCTYPE RETS SYSTEM \""+docTypeLocation+"\">\r\n"+responseBody;
-
+        }
 
         ByteArrayInputStream bais = new ByteArrayInputStream(
                                         (responseBody).getBytes());
