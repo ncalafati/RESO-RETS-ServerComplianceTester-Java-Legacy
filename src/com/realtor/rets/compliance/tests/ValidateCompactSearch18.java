@@ -11,7 +11,7 @@ public class ValidateCompactSearch18 extends ValidateCompact {
    */
   public ValidateCompactSearch18() {
      super();
-    setDocTypeLocation("rets-compact-search-1_7_2.dtd");
+    setDocTypeLocation("rets-compact-search-1_8.dtd");
   }
 
 }
