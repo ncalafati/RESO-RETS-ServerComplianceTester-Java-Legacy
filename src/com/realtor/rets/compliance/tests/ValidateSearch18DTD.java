@@ -11,7 +11,7 @@ public class ValidateSearch18DTD extends ValidateDTD {
    */
   public ValidateSearch18DTD() {
      super();
-    setDocTypeLocation("RETS-20080829.dtd");
+    setDocTypeLocation("RETS-1.8_DD.dtd");
   }
 
 }
