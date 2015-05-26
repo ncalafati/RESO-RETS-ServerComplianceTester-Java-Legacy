@@ -1,0 +1,60 @@
+<!-- RESO REData DTD Module 
+     Version: 1.3  20150105
+
+     PUBLIC "-//RETS//RESO Data Dictionary XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/REData.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ENTITY % CommonElements SYSTEM "CommonElements.dtd">
+%CommonElements;
+
+<!ENTITY % Property SYSTEM "Property.dtd">
+%Property;
+
+<!ENTITY % Member SYSTEM "Member.dtd">
+%Member;
+
+<!ENTITY % Office SYSTEM "Office.dtd">
+%Office;
+
+<!ENTITY % Contacts SYSTEM "Contacts.dtd">
+%Contacts;
+
+<!ENTITY % Media SYSTEM "Media.dtd">
+%Media;
+
+<!ENTITY % History SYSTEM "History.dtd">
+%History;
+
+<!ENTITY % SavedSearch SYSTEM "SavedSearch.dtd">
+%SavedSearch;
+
+<!ENTITY % OpenHouse SYSTEM "OpenHouse.dtd">
+%OpenHouse;
+
+<!ELEMENT ContactCollection (CopyrightNotice, Disclaimer, Contacts*)>
+<!ELEMENT HistoryCollection (CopyrightNotice, Disclaimer, History*)>
+<!ELEMENT MediaCollection (CopyrightNotice, Disclaimer, Media*)>
+<!ELEMENT MemberCollection (CopyrightNotice, Disclaimer, Member*)>
+<!ELEMENT OfficeCollection (CopyrightNotice, Disclaimer, Office*)>
+<!ELEMENT OpenHouseCollection (CopyrightNotice, Disclaimer, OpenHouse*)>
+<!ELEMENT PropertyCollection (CopyrightNotice, Disclaimer, Property*)>
+<!ELEMENT SavedSearchCollection (CopyrightNotice, Disclaimer, SavedSearch*)>
+
+<!ELEMENT REData (
+ContactCollection?, 
+HistoryCollection?, 
+MediaCollection?, 
+MemberCollection?, 
+OfficeCollection?, 
+OpenHouseCollection?,
+PropertyCollection?, 
+SavedSearchCollection?
+)>

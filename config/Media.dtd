@@ -1,0 +1,32 @@
+<!-- RESO Data Dictionary DTD Media Module 
+     PUBLIC "-//RETS//RESO Data Dictionary Media XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/Media.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT Group (#PCDATA)>
+<!ELEMENT ImageHeight (#PCDATA)>
+<!ELEMENT ImageSizeDescription (#PCDATA)>
+<!ELEMENT ImageWidth (#PCDATA)>
+<!ELEMENT LongDescription (#PCDATA)>
+<!ELEMENT MediaCategory (#PCDATA)>
+<!ELEMENT MediaHTML (#PCDATA)>
+<!ELEMENT MediaKey (#PCDATA)>
+<!ELEMENT MediaModificationTimestamp (#PCDATA)>
+<!ELEMENT MediaObjectID (#PCDATA)>
+<!ELEMENT MediaStatus (#PCDATA)>
+<!ELEMENT MediaURL (#PCDATA)>
+<!ELEMENT MimeType (#PCDATA)>
+<!ELEMENT Order (#PCDATA)>
+<!ELEMENT OriginatingSystemMediaKey (#PCDATA)>
+<!ELEMENT Permission (#PCDATA)>
+<!ELEMENT ShortDescription (#PCDATA)>
+<!ELEMENT Media (ChangedByMemberID?, ChangedByMemberKey?, ClassName?, Group?, ImageHeight?, ImageSizeDescription?, ImageWidth?, LongDescription?, MediaCategory?, MediaHTML?, MediaKey?, MediaModificationTimestamp?, MediaObjectID?, MediaStatus?, MediaURL?, MimeType?, ModificationTimestamp?, Order?, OriginatingSystemMediaKey?, OriginatingSystemName?, Permission?, ResourceName?, ResourceRecordID?, ResourceRecordKey?, ShortDescription?)>
+

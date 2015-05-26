@@ -1,0 +1,42 @@
+<!-- RESO Data Dictionary DTD Office Module 
+     PUBLIC "-//RETS//RESO Data Dictionary Office XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/Office.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT FranchiseAffiliation (#PCDATA)>
+<!ELEMENT IDXOfficeParticipationYN (#PCDATA)>
+<!ELEMENT MainOfficeKey (#PCDATA)>
+<!ELEMENT MainOfficeMlsId (#PCDATA)>
+<!ELEMENT OfficeAddress1 (#PCDATA)>
+<!ELEMENT OfficeAddress2 (#PCDATA)>
+<!ELEMENT OfficeAOR (#PCDATA)>
+<!ELEMENT OfficeAORkey (#PCDATA)>
+<!ELEMENT OfficeAORMlsId (#PCDATA)>
+<!ELEMENT OfficeAssociationComments (#PCDATA)>
+<!ELEMENT OfficeBranchType (#PCDATA)>
+<!ELEMENT OfficeBrokerKey (#PCDATA)>
+<!ELEMENT OfficeBrokerMlsId (#PCDATA)>
+<!ELEMENT OfficeCity (#PCDATA)>
+<!ELEMENT OfficeCorporateLicense (#PCDATA)>
+<!ELEMENT OfficeCountyOrParish (#PCDATA)>
+<!ELEMENT OfficeEmail (#PCDATA)>
+<!ELEMENT OfficeFax (#PCDATA)>
+<!ELEMENT OfficeManagerKey (#PCDATA)>
+<!ELEMENT OfficeManagerMlsId (#PCDATA)>
+<!ELEMENT OfficeNrdsId (#PCDATA)>
+<!ELEMENT OfficePostalCode (#PCDATA)>
+<!ELEMENT OfficePostalCodePlus4 (#PCDATA)>
+<!ELEMENT OfficeStateOrProvince (#PCDATA)>
+<!ELEMENT OfficeStatus (#PCDATA)>
+<!ELEMENT OfficeType (#PCDATA)>
+<!ELEMENT OriginatingSystemOfficeKey (#PCDATA)>
+<!ELEMENT Office (FranchiseAffiliation?, IDXOfficeParticipationYN?, MainOfficeKey?, MainOfficeMlsId?, OfficeAddress1?, OfficeAddress2?, OfficeAOR?, OfficeAORkey?, OfficeAORMlsId?, OfficeAssociationComments?, OfficeBranchType?, OfficeBrokerKey?, OfficeBrokerMlsId?, OfficeCity?, OfficeCorporateLicense?, OfficeCountyOrParish?, OfficeEmail?, OfficeFax?, OfficeKey?, OfficeManagerKey?, OfficeManagerMlsId?, OfficeMlsId?, OfficeName?, OfficeNrdsId?, OfficePhone?, OfficePhoneExt?, OfficePostalCode?, OfficePostalCodePlus4?, OfficeStateOrProvince?, OfficeStatus?, OfficeType?, OriginatingSystemName?, OriginatingSystemOfficeKey?, TimestampEntered?, TimestampLastLoggedIn?, TimestampModified?)>
+

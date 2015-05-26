@@ -1,0 +1,17 @@
+<!-- RESO Data Dictionary DTD SavedSearch Module 
+     PUBLIC "-//RETS//RESO Data Dictionary SavedSearch XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.8/1.3/SavedSearch.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+-->
+
+
+<!ELEMENT OriginatingSystemMemberName (#PCDATA)>
+<!ELEMENT SearchDescription (#PCDATA)>
+<!ELEMENT SearchKey (#PCDATA)>
+<!ELEMENT SearchName (#PCDATA)>
+<!ELEMENT SearchQuery (#PCDATA)>
+<!ELEMENT SearchQueryType (#PCDATA)>
+<!ELEMENT SearchType (#PCDATA)>
+<!ELEMENT SavedSearch (ClassName?, MemberKey?, MemberMlsId?, ModificationTimestamp?, OriginalEntryTimestamp?, OriginatingSystemKey?, OriginatingSystemMemberKey?, OriginatingSystemMemberName?, OriginatingSystemName?, ResourceName?, SearchDescription?, SearchKey?, SearchName?, SearchQuery?, SearchQueryType?, SearchType?)>
+

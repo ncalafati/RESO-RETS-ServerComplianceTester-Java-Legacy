@@ -1,0 +1,30 @@
+<!-- RESO Data Dictionary DTD OpenHouse Module 
+     PUBLIC "-//RETS//RESO Data Dictionary OpenHouse XML//EN"
+     SYSTEM "http://www.rets.org/dtd/1.7.2/1.3/OpenHouse.dtd"
+
+     WARNING: This file is generated using the RESO Data Dictionary Schema tool
+All items in this zip file abide by the following:
+
+Copyright 2015 RESO. By using this document you agree to the RESO End User License Agreement (EULA) posted at:
+
+https://reso.memberclicks.net/assets/docs/reso%20eula.pdf
+-->
+
+
+<!ELEMENT AppointmentRequiredYN (#PCDATA)>
+<!ELEMENT Attended (#PCDATA)>
+<!ELEMENT OpenHouseDate (#PCDATA)>
+<!ELEMENT OpenHouseEndTime (#PCDATA)>
+<!ELEMENT OpenHouseId (#PCDATA)>
+<!ELEMENT OpenHouseKey (#PCDATA)>
+<!ELEMENT OpenHouseRemarks (#PCDATA)>
+<!ELEMENT OpenHouseStartTime (#PCDATA)>
+<!ELEMENT OpenHouseType (#PCDATA)>
+<!ELEMENT Refreshments (#PCDATA)>
+<!ELEMENT ShowingAgentFirstName (#PCDATA)>
+<!ELEMENT ShowingAgentKey (#PCDATA)>
+<!ELEMENT ShowingAgentLastName (#PCDATA)>
+<!ELEMENT ShowingAgentMlsID (#PCDATA)>
+<!ELEMENT Status (#PCDATA)>
+<!ELEMENT OpenHouse (AppointmentRequiredYN?, Attended?, ListingId?, ListingKey?, ModificationTimestamp?, OpenHouseDate?, OpenHouseEndTime?, OpenHouseId?, OpenHouseKey?, OpenHouseRemarks?, OpenHouseStartTime?, OpenHouseType?, OriginalEntryTimestamp?, OriginatingSystemKey?, OriginatingSystemName?, Refreshments?, ShowingAgentFirstName?, ShowingAgentKey?, ShowingAgentLastName?, ShowingAgentMlsID?, Status?)>
+
