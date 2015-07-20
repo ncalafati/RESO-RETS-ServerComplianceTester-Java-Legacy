@@ -59,7 +59,7 @@ public class DMQLSetupTest extends TestCase {
         DMQLTestConfigurer DMQLTester = null;
         MetadataFacade mdFacade = null;
         log.debug("JUNIT - Running DMQL tests");
-        DMQLTester = new DMQLTestConfigurer(m_username, m_password, m_serverUrl, m_transLogDir, null,null);
+        DMQLTester = new DMQLTestConfigurer(m_username, m_password, m_serverUrl, m_transLogDir,null, null,null);
         assertNotNull("DMQLTestConfigurer obj is null", DMQLTester);
 
         try {
